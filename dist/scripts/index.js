@@ -1,3 +1,5 @@
+window.scrollTo(0,0)
+
 const li = document.getElementById('drop-list');
 const dropList = document.getElementById('drop-list-sub');
 li.addEventListener('mouseenter', () =>{
