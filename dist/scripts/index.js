@@ -1,5 +1,7 @@
 window.scrollTo(0,0)
 
+
+//animate droplist
 const li = document.getElementById('drop-list');
 const dropList = document.getElementById('drop-list-sub');
 li.addEventListener('mouseenter', () =>{
@@ -14,6 +16,8 @@ li.addEventListener('mouseleave', () =>{
         dropList.style.display = 'none';
     },300) 
 })
+
+//animate baner text
 const banerText = document.getElementById('banner-first-text');
 const newCollectionBtn = document.getElementById('pseudo-btn');
 const startAnimation = (element) =>{
@@ -31,6 +35,7 @@ startAnimation(newCollectionBtn);
 
 
 
+//animation fade in of products
 let i = 0;
 
 const newCollectionArticles = document.querySelectorAll('.first-page-product');
@@ -59,6 +64,8 @@ newCollectionArticles.forEach( el =>{
 });
 
 
+
+//hide nav-bar while scroll
 const navBar = document.querySelector('.nav-bar');
 
 const listenEnter = () =>{
@@ -89,7 +96,6 @@ window.addEventListener('scroll', () =>{
             howMuchListeners = 0;
             navBar.removeEventListener('mouseover', listenEnter);
             navBar.removeEventListener('mouseleave', listenLeave);
-            console.log(window.pageYOffset);
             navBar.style.opacity = '1';
         }
         else if(window.pageYOffset > 300){
@@ -102,7 +108,6 @@ window.addEventListener('scroll', () =>{
             else{
                 setTimeout(() =>{
                     navBar.style.opacity = '0';
-                    console.log(window.pageYOffset);
                     navBar.addEventListener('mouseover', listenEnter);
                     navBar.addEventListener('mouseleave', listenLeave);
                 },1000)
