@@ -162,6 +162,23 @@ a{
     display: flex;
     flex-direction: column;
 }
+/* styling for chrome, safari, edge */
+body::-webkit-scrollbar {
+    width: 5px;
+}
+  
+body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 20px;
+}
+body{
+    scrollbar-width: thin;
+    scrollbar-color: white transparent; 
+}
 @media (max-width: 963px){
     #nav-btn{
         display: block;
