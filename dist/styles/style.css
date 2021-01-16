@@ -11,6 +11,9 @@ html{
 body{
     overflow-x: hidden;
 }
+#nav-btn{
+    display: none;
+}
 .nav-bar{
     display: flex;
     background-image: linear-gradient(to right, black 30%, transparent);
@@ -160,14 +163,59 @@ a{
     flex-direction: column;
 }
 @media (max-width: 963px){
+    #nav-btn{
+        display: block;
+        height: 40px;
+        width: 40px;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        border: 1px solid white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;
+    }
+    #top, #mid, #bottom{
+        background-color: white;
+        width: 25px;
+        height: 3px;
+        position: absolute;
+        transition: .4s;
+    }
+    #top{
+        top: 8px;
+    }
+    #bottom{
+        bottom: 8px;
+    }
+    .hamburger--active #mid{
+        background-color: transparent;
+    }
+    .hamburger--active #top{
+        transform: translateY(10px) rotate(45deg);
+    }
+    .hamburger--active #bottom{
+        transform: translateY(-10px) rotate(-45deg);
+    }
     .nav-bar, .nav-bar ul{
         flex-direction: column;
     }
     .nav-bar{
-        position: relative;
+        left: -100%;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        position: fixed;
+    }
+    .showMenu{
+        left: 0;
+    }
+    .overflowHidden{
+        overflow: hidden;
     }
     .nav-bar img{
-        width: 100%;
+        width: 80%;
     }
     p#banner-first-text{
         font-size: 3rem;
@@ -192,9 +240,6 @@ a{
         display: flex;
         position: relative;
         opacity: 1;
-    }
-    #baner{
-        margin-top: 100%;
     }
     a#pseudo-btn:hover{
         background-color: transparent;

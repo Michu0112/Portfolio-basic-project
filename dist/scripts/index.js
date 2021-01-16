@@ -120,3 +120,10 @@ window.addEventListener('scroll', () =>{
     }
 });
 
+//side button animation
+const btn = document.getElementById('nav-btn');
+btn.addEventListener('click', () =>{
+    btn.classList.toggle('hamburger--active');
+    navBar.classList.toggle('showMenu');
+    document.body.classList.toggle('overflowHidden');
+});
