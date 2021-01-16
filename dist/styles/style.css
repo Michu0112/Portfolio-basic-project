@@ -200,6 +200,9 @@ body{
         position: absolute;
         transition: .4s;
     }
+    #baner{
+        background-position: -350px;
+    }
     #top{
         top: 8px;
     }
@@ -235,6 +238,7 @@ body{
     .nav-bar img{
         width: 80%;
     }
+
     p#banner-first-text{
         font-size: 3rem;
     }
