@@ -32,6 +32,9 @@ p:first-of-type{
     height: 500px;
     margin: 10px;
 }
+.nav-bar{
+    height: 100vh;
+}
 #content p:first-of-type{
     font-weight: bolder;
     text-align: center;

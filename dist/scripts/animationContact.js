@@ -1,6 +1,8 @@
 const content = document.getElementById('content');
 const animFunc = () =>{
-    content.style.transform = 'translateY(-50px)';
-    content.style.opacity = '1';
+    setTimeout(() =>{
+        content.style.transform = 'translateY(-50px)';
+        content.style.opacity = '1';
+    },200);
 }
 animFunc();
