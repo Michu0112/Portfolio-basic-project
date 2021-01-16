@@ -56,4 +56,58 @@ let observer = new IntersectionObserver(callbackFunc, options);
 
 newCollectionArticles.forEach( el =>{
     observer.observe(el);
-})
+});
+
+
+const navBar = document.querySelector('.nav-bar');
+
+const listenEnter = () =>{
+    if(window.innerWidth < 963){
+        return;
+    }
+    else{
+        navBar.style.opacity = '1';
+    }
+}
+
+const listenLeave = () => {
+    if(window.innerWidth < 963){
+        return;
+    }
+    else{
+        setTimeout(() =>{
+            navBar.style.opacity = '0';
+        },5000)
+    }
+}
+
+let howMuchListeners = 0;
+
+window.addEventListener('scroll', () =>{
+    if(window.innerWidth > 963){
+        if(window.pageYOffset === 0){
+            howMuchListeners = 0;
+            navBar.removeEventListener('mouseover', listenEnter);
+            navBar.removeEventListener('mouseleave', listenLeave);
+            console.log(window.pageYOffset);
+            navBar.style.opacity = '1';
+        }
+        else if(window.pageYOffset > 300){
+
+            howMuchListeners++;
+
+            if(howMuchListeners > 1){
+                return;
+            }
+            else{
+                setTimeout(() =>{
+                    navBar.style.opacity = '0';
+                    console.log(window.pageYOffset);
+                    navBar.addEventListener('mouseover', listenEnter);
+                    navBar.addEventListener('mouseleave', listenLeave);
+                },1000)
+            }
+        }
+    }
+});
+
