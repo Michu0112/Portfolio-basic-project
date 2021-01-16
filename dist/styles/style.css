@@ -30,13 +30,20 @@ body{
     margin: 0 20px;
 }
 .nav-bar ul li{
-    padding: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     cursor: pointer;
     font-weight: bold;
+}
+.nav-bar ul li a{
+    padding: 30px;
+}
+.nav-bar ul li ul li a{
+    padding: 10px;
+    width: 150px;
+    text-align: center;
 }
 .nav-bar ul li:hover{
     background-color:rgb(255, 255, 255);
@@ -164,6 +171,19 @@ a{
     }
     p#banner-first-text{
         font-size: 3rem;
+    }
+    .nav-bar ul li:hover{
+        background-color: transparent;
+    }
+    .nav-bar ul li:hover a{
+        color: white;
+    }
+    .nav-bar ul li ul li:hover{
+        background-color: transparent;
+    }
+    .nav-bar ul li ul li a{
+        font-size: .85rem;
+        color: gray;
     }
     #baner{
         margin-top: 100%;
