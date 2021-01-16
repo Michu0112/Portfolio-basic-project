@@ -6,13 +6,6 @@ const li = document.getElementById('drop-list');
 const dropList = document.getElementById('drop-list-sub');
 
 
-if(window.innerWidth < 963){
-    dropList.style.display = 'flex';
-    dropList.style.opacity = '1';
-    dropList.style.position = 'relative';
-    li.style.flexDirection = 'column';
-}
-
 li.addEventListener('mouseenter', () =>{
     dropList.style.display = 'flex';
     setTimeout(() =>{

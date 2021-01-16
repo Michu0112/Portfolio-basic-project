@@ -185,6 +185,14 @@ a{
         font-size: .85rem;
         color: gray;
     }
+    .nav-bar ul li#drop-list{
+        flex-direction: column;
+    }
+    .nav-bar ul li ul {
+        display: flex;
+        position: relative;
+        opacity: 1;
+    }
     #baner{
         margin-top: 100%;
     }
