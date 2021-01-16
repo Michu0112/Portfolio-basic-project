@@ -5,7 +5,7 @@ window.scrollTo(0,0)
 const li = document.getElementById('drop-list');
 const dropList = document.getElementById('drop-list-sub');
 
-
+if(window.innerWidth > 963){
 li.addEventListener('mouseenter', () =>{
     dropList.style.display = 'flex';
     setTimeout(() =>{
@@ -18,7 +18,10 @@ li.addEventListener('mouseleave', () =>{
         dropList.style.display = 'none';
     },300) 
 })
-
+}
+else{
+    dropList.style.display = "none";
+}
 
 
 //animate baner text

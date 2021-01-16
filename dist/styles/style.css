@@ -224,6 +224,7 @@ body{
         display: flex;
         align-items: center;
         position: fixed;
+        height: 100vh;
     }
     .showMenu{
         left: 0;
