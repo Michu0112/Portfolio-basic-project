@@ -1,11 +1,12 @@
 p{
     color: white;
 }
-p:first-of-type{
-    display: none;
+#content p:first-of-type{
+    margin-top: 100px;
+    font-weight: bolder;
 }
 #header{
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     font-size: 3em;
@@ -17,7 +18,7 @@ p:first-of-type{
     flex-direction: column;
     margin: 50px;
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(50px);
     position: relative;
     transition: .8s;
 }
@@ -29,13 +30,14 @@ p:first-of-type{
     font-weight: bold;
 }
 @media (max-width:963px){
-p:first-of-type{
-    display: block;
+#header{
+    display: flex;
 }
 #content{
     justify-content: space-around;
-    height: 500px;
+    height: fit-content;
     margin: 10px;
+    font-size: .8rem;
 }
 .nav-bar{
     height: 100vh;
